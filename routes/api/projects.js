@@ -59,3 +59,22 @@ async (req, res) => {
 
     NEW_PROJECT.save().then(project => res.json(project));
 });
+
+router.patch("/update",
+passport.authenticate("jwt", { session: false}),
+(req, res) => {
+    let projectFields = {};
+
+    projectFields.name = req.body.projectName;
+    projectFields.teamMembers = req.body.members;
+
+    Project.findOneAndUpdate(
+        { _id: req.body.id },
+        { $set: projectFields },
+        { new: true }
+    )
+    .then(project => {
+        res.json(project);
+    })
+    .catch(err => console.log(err));
+});
