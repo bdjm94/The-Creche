@@ -8,4 +8,16 @@ router.get("/",
 passport.authenticate("jwt", { session: false }),
 async (req, res) => {
     let projectsArr = [];
+    await Project.find({})
+    .then(projects => {
+        projects.map(project => {
+            project.teamMembers && project.teamMembers.map(member => {
+                if (member.email == req.user.email) {
+                    projectsArr.push(project);
+                }
+            });
+        });
+    })
+    .catch(err => console.log(err));
+    
 })
