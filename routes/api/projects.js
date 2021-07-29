@@ -41,3 +41,21 @@ passport.authenticate("jwt", { session: false }),
 
     Project.findById(id).then(project => res.json(project));
 });
+
+router.post("/create",
+passport.authenticate("jwt", { session: false }),
+async (req, res) => {
+    const OWNER = {
+        id: req.user.id,
+        name: req.user.name,
+        email: req.user.email
+    };
+
+    const NEW_PROJECT = await new Project({
+        owner: OWNER,
+        name: req.body.projectName,
+        teamMembers: req.body.members
+    });
+
+    NEW_PROJECT.save().then(project => res.json(project));
+});
