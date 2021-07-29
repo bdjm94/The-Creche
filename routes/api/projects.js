@@ -78,3 +78,13 @@ passport.authenticate("jwt", { session: false}),
     })
     .catch(err => console.log(err));
 });
+
+router.delete("/delete/:id",
+passport.authenticate("jwt", { session: false }),
+(req, res) => {
+    Project.findById(req.params.id).then(project => {
+        project.remove().then(() => res.json({ session: true }));
+    });
+});
+
+module.exports = router;
