@@ -33,3 +33,11 @@ async (req, res) => {
     })
     .catch(err => console.log(err));
 });
+
+router.get("/:id", 
+passport.authenticate("jwt", { session: false }),
+(req, res) => {
+    let id = req.params.id;
+
+    Project.findById(id).then(project => res.json(project));
+});
