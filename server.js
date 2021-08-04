@@ -24,3 +24,9 @@ const db = require("./config/keys").mongoURI;
 mongoose.connect(db, { useNewUrlParser: true } )
   .then(() => console.log("MongoDB successfully connected"))
   .catch(err => console.log(err));
+
+// Passport middleware
+app.use(passport.initialize());
+
+// Passport config
+require("./config/passport")(passport);
