@@ -30,3 +30,8 @@ app.use(passport.initialize());
 
 // Passport config
 require("./config/passport")(passport);
+
+// Routes
+app.use("/api/users", users);
+app.use("/api/projects", projects);
+app.use("/api/tasks", tasks);
