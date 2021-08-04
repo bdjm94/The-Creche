@@ -28,3 +28,12 @@ passport.authenticate("jwt", { session: false }),
       .catch(err => console.log(err));
   }
 );
+
+router.delete("/delete/:id",
+passport.authenticate("jwt", { session: false }),
+(req, res) => {
+    Task.findById(req.params.id).then(task => {
+      task.remove().then(() => res.json({ success: true }));
+    });
+  }
+);
