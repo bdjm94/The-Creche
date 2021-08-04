@@ -17,7 +17,7 @@ router.post("/register", (req, res) => {
   // Check validation
   if (!isValid) {
     return res.status(400).json(errors);
-  }
+}
 
 User.findOne({ email: req.body.email }).then(user => {
     if (user) {
@@ -50,4 +50,12 @@ router.post("/login", (req, res) => {
   // Check validation
   if (!isValid) {
     return res.status(400).json(errors);
-  }
+}
+
+  const email = req.body.email;
+  const password = req.body.password;
+
+ User.findOne({ email }).then(user => {
+    if (!user) {
+      return res.status(404).json({ emailnotfound: "Email not found" });
+}
