@@ -12,3 +12,19 @@ passport.authenticate("jwt", { session: false }),
     Task.find({ project: id }).then(tasks => res.json(tasks));
   }
 );
+
+router.post("/create",
+passport.authenticate("jwt", { session: false }),
+(req, res) => {
+    const NEW_TASK = new Task({
+      project: req.body.project,
+      taskName: req.body.taskName,
+      dateDue: req.body.dateDue,
+      assignee: req.body.assignee
+    });
+
+    NEW_TASK.save()
+      .then(task => res.json(task))
+      .catch(err => console.log(err));
+  }
+);
