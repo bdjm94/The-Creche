@@ -50,3 +50,9 @@ class Modal extends Component {
       this.setState({ [e.target.id]: e.target.value });
     }
   };
+
+    addMember = e => {
+    this.setState(prevState => ({
+      members: [...prevState.members, { name: "", email: "" }]
+    }));
+  };
