@@ -49,3 +49,22 @@ export const deleteProject = (id, history) => dispatch => {
     .then(res => history.push("/dashboard"))
     .catch(err => console.log(err));
 };
+
+// Getting specific project by ID
+export const getProject = id => dispatch => {
+  dispatch(setProjectLoading());
+  axios
+    .get(`/api/projects/${id}`)
+    .then(res =>
+      dispatch({
+        type: GET_PROJECT,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_PROJECT,
+        payload: null
+      })
+    );
+};
