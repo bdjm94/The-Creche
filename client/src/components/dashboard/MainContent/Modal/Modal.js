@@ -85,3 +85,13 @@ class Modal extends Component {
     this.onClose();
     window.location.reload();
   };
+
+    deleteProject = id => {
+    this.props.deleteProject(id, this.props.history);
+    this.onClose();
+  };
+
+    deleteTask = id => {
+    this.props.deleteTask(id);
+    this.onClose();
+  };
