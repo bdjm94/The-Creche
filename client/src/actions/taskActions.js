@@ -65,3 +65,10 @@ export const updateTask = taskData => dispatch => {
     )
     .catch(err => console.log(err));
 };
+
+// Tasks loading
+export const setTasksLoading = () => {
+  return {
+    type: TASKS_LOADING
+  };
+};
