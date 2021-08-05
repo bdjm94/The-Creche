@@ -56,3 +56,9 @@ class Modal extends Component {
       members: [...prevState.members, { name: "", email: "" }]
     }));
   };
+
+    deleteMember = index => {
+    let array = [...this.state.members];
+    array.splice(index, 1);
+    this.setState({ members: array });
+  };
