@@ -20,3 +20,22 @@ export const createTask = taskData => dispatch => {
     )
     .catch(err => console.log(err));
 };
+
+ // Getting tasks by project ID
+export const getTasks = id => dispatch => {
+  dispatch(setTasksLoading());
+  axios
+    .get(`/api/tasks/${id}`)
+    .then(res =>
+      dispatch({
+        type: GET_TASKS,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_TASKS,
+        payload: null
+      })
+    );
+};
