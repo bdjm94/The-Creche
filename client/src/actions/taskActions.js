@@ -40,7 +40,7 @@ export const getTasks = id => dispatch => {
     );
 };
 
-// Delete Task
+ // Deleting Tasks
 export const deleteTask = id => dispatch => {
   axios
     .delete(`/api/tasks/delete/${id}`)
@@ -48,6 +48,19 @@ export const deleteTask = id => dispatch => {
       dispatch({
         type: DELETE_TASK,
         payload: id
+      })
+    )
+    .catch(err => console.log(err));
+};
+
+ // Updating Tasks
+export const updateTask = taskData => dispatch => {
+  axios
+    .patch("/api/tasks/update", taskData)
+    .then(res =>
+      dispatch({
+        type: UPDATE_TASK,
+        payload: res.data
       })
     )
     .catch(err => console.log(err));
