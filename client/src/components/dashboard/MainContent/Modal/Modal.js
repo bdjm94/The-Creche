@@ -95,3 +95,19 @@ class Modal extends Component {
     this.props.deleteTask(id);
     this.onClose();
   };
+
+    onClose = e => {
+    this.props.onClose && this.props.onClose(e);
+    this.setState({
+      projectName: "",
+      taskName: "",
+      assignee: "",
+      monthDue: "",
+      dayDue: "",
+      members: [{ name: "", email: "" }]
+    });
+  };
+
+    onSelectChange = e => {
+    this.setState({ [e.target.id]: e.target.value });
+  };
