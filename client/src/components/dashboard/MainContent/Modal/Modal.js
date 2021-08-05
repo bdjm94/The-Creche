@@ -72,3 +72,16 @@ class Modal extends Component {
     this.props.createProject(project);
     this.onClose();
   };
+
+    updateProject = async id => {
+    let project = {
+      id: this.props.id,
+      projectName: this.state.projectName,
+      members: this.state.members
+    };
+
+    await this.props.updateProject(project);
+
+    this.onClose();
+    window.location.reload();
+  };
