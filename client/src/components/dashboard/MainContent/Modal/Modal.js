@@ -62,3 +62,13 @@ class Modal extends Component {
     array.splice(index, 1);
     this.setState({ members: array });
   };
+
+    createProject = () => {
+    let project = {
+      projectName: this.state.projectName,
+      members: this.state.members
+    };
+
+    this.props.createProject(project);
+    this.onClose();
+  };
