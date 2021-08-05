@@ -38,3 +38,9 @@ export default function(state = initialState, action) {
           project => project._id !== action.payload
         )
       };
+          case GET_PROJECT:
+      return {
+        ...state,
+        project: action.payload,
+        projectLoading: false
+      };
