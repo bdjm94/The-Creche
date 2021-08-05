@@ -18,3 +18,9 @@ export default function(state = initialState, action) {
         ...state,
         tasks: [action.payload, ...state.tasks]
       };
+          case GET_TASKS:
+      return {
+        ...state,
+        tasks: action.payload,
+        tasksLoading: false
+      };
