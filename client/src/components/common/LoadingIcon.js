@@ -6,7 +6,7 @@ import "./LoadingIcon.scss";
 
 const Loading = () => {
   return (
-    <div className="Loading">
+    <div className="loading">
       <img className="indicator" src={loading} alt="Loading..." />
     </div>
   );
