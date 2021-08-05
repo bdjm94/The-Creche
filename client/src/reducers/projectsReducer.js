@@ -44,3 +44,23 @@ export default function(state = initialState, action) {
         project: action.payload,
         projectLoading: false
       };
+          case GET_PROJECTS:
+      return {
+        ...state,
+        projects: action.payload,
+        projectsLoading: false
+      };
+          case PROJECT_LOADING:
+      return {
+        ...state,
+        projectLoading: true
+      };
+          case PROJECTS_LOADING:
+      return {
+        ...state,
+        projectsLoading: true
+      };
+          default:
+      return state;
+  }
+}
