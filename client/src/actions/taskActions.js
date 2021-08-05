@@ -39,3 +39,16 @@ export const getTasks = id => dispatch => {
       })
     );
 };
+
+// Delete Task
+export const deleteTask = id => dispatch => {
+  axios
+    .delete(`/api/tasks/delete/${id}`)
+    .then(res =>
+      dispatch({
+        type: DELETE_TASK,
+        payload: id
+      })
+    )
+    .catch(err => console.log(err));
+};
