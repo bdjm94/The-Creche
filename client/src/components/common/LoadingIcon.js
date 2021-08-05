@@ -2,7 +2,7 @@ import React from "react";
 
 import loading from "../../img/loadingIcon.gif";
 
-import "./loadingIcon.scss";
+import "./LoadingIcon.scss";
 
 const Loading = () => {
   return (
