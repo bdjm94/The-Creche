@@ -25,13 +25,27 @@ export const createProject = projectData => dispatch => {
 
  // Updating project
 export const updateProject = projectData => dispatch => {
-    axios
-      .patch("/api/projects/update", projectData)
-      .then(res =>
-        dispatch({
-          type: UPDATE_PROJECT,
-          payload: res.data
-        })
-      )
-      .catch(err => console.log(err));
-  };
+  axios
+    .patch("/api/projects/update", projectData)
+    .then(res =>
+      dispatch({
+        type: UPDATE_PROJECT,
+         payload: res.data
+      })
+    )
+    .catch(err => console.log(err));
+};
+
+ // Deleting project
+export const deleteProject = (id, history) => dispatch => {
+  axios
+    .delete(`/api/projects/delete/${id}`)
+    .then(res =>
+      dispatch({
+        type: DELETE_PROJECT,
+        payload: id
+      })
+    )
+    .then(res => history.push("/dashboard"))
+    .catch(err => console.log(err));
+};
