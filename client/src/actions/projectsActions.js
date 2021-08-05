@@ -87,3 +87,17 @@ export const getProjects = () => dispatch => {
       })
     );
 };
+
+// Project loading
+export const setProjectLoading = () => {
+  return {
+    type: PROJECT_LOADING
+  };
+};
+
+// Projects loading
+export const setProjectsLoading = () => {
+  return {
+    type: PROJECTS_LOADING
+  };
+};
