@@ -22,3 +22,16 @@ export const createProject = projectData => dispatch => {
     )
     .catch(err => console.log(err));
 };
+
+ // Updating project
+export const updateProject = projectData => dispatch => {
+    axios
+      .patch("/api/projects/update", projectData)
+      .then(res =>
+        dispatch({
+          type: UPDATE_PROJECT,
+          payload: res.data
+        })
+      )
+      .catch(err => console.log(err));
+  };
