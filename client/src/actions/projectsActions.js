@@ -68,3 +68,22 @@ export const getProject = id => dispatch => {
       })
     );
 };
+
+// Getting projects for a specific user
+export const getProjects = () => dispatch => {
+  dispatch(setProjectsLoading());
+  axios
+    .get("/api/projects")
+    .then(res =>
+      dispatch({
+        type: GET_PROJECTS,
+        payload: res.data
+      })
+    )
+    .catch(err =>
+      dispatch({
+        type: GET_PROJECTS,
+        payload: null
+      })
+    );
+};
