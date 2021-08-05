@@ -22,3 +22,12 @@ export default function(state = initialState, action) {
         ...state,
         projects: [action.payload, ...state.projects]
       };
+          case UPDATE_PROJECT:
+      let index = state.projects.findIndex(
+        project => project._id === action.payload._id
+      );
+            state.projects.splice(index, 1);
+      return {
+        ...state,
+        projects: [action.payload, ...state.projects]
+      };
