@@ -16,3 +16,14 @@ import {
 import moment from "moment";
 
 import "./Modal.scss";
+
+class Modal extends Component {
+  state = {
+    projectName: "",
+    members: [{ name: "", email: "" }],
+    taskName: "",
+    assignee: "",
+    monthDue: "",
+    dayDue: "",
+    taskId: ""
+  };
