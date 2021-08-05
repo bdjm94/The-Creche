@@ -27,3 +27,16 @@ class Modal extends Component {
     dayDue: "",
     taskId: ""
   };
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.edit) {
+      this.setState({
+        projectName: nextProps.name,
+        members: nextProps.members
+      });
+    } else if (nextProps.editTask) {
+      this.setState({
+        taskName: nextProps.taskName
+      });
+    }
+  }
