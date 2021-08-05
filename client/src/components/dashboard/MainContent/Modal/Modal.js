@@ -40,3 +40,13 @@ class Modal extends Component {
       });
     }
   }
+
+    onChange = e => {
+    if (["name", "email"].includes(e.target.name)) {
+      let members = [...this.state.members];
+      members[e.target.dataset.id][e.target.name] = e.target.value;
+      this.setState({ members });
+    } else {
+      this.setState({ [e.target.id]: e.target.value });
+    }
+  };
