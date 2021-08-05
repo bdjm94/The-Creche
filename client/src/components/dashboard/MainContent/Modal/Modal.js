@@ -111,3 +111,31 @@ class Modal extends Component {
     onSelectChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
+
+    createTask = e => {
+    e.preventDefault();
+
+    let fullDate =
+      this.state.monthDue +
+      "-" +
+      this.state.dayDue +
+      "-" +
+      Date().split(" ")[3];
+
+    let momentDate = moment(fullDate, "MM-DD-YYYY")
+      ._d.toString()
+      .split(" ");
+
+    let finalDate = momentDate[1] + " " + momentDate[2];
+
+    const data = {
+      project: this.props.projects.project._id,
+      taskName: this.state.taskName,
+      assignee: this.state.assignee,
+      dateDue: finalDate
+    };
+
+    this.props.createTask(data);
+
+    this.onClose();
+  };
