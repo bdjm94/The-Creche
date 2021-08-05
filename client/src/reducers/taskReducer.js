@@ -33,3 +33,17 @@ export default function(state = initialState, action) {
         ...state,
         tasks: [action.payload, ...state.tasks]
       };
+          case DELETE_TASK:
+      return {
+        ...state,
+        tasks: state.tasks.filter(task => task._id !== action.payload)
+      };
+          case TASKS_LOADING:
+      return {
+        ...state,
+        tasksLoading: true
+      };
+          default:
+      return state;
+  }
+}
