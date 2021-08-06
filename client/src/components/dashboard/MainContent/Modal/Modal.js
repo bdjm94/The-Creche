@@ -609,3 +609,25 @@ class Modal extends Component {
               />
             </label>
           </div>
+                    <div className="form-label">Add team members (optional)</div>
+          <button className="main-btn add-members" onClick={this.addMember}>
+            Add another member
+          </button>
+          <div className="members">
+            {members.map((val, id) => {
+              let memberId = `member-${id}`,
+                emailId = `email-${id}`;
+              return (
+                <div className="split" key={id}>
+                  <label className="form-label" htmlFor={memberId}>
+                    Name (required for teams)
+                    <input
+                      type="text"
+                      name="name"
+                      data-id={id}
+                      id={memberId}
+                      value={members[id].name}
+                      className="form-input"
+                      onChange={this.onChange}
+                    />
+                  </label>
