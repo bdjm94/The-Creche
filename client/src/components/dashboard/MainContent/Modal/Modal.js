@@ -345,3 +345,13 @@ class Modal extends Component {
         </form>
       );
     }
+            // Edit Task modal
+        else if (this.props.editTask) {
+      const { teamMembers } = this.props.projects.project;
+      const { name, email } = this.props.auth.user;
+
+      const { assignee, dateDue, taskId } = this.props;
+      let assigneeName;
+
+      let assignedMonth = moment(dateDue).month() + 1;
+      let assignedDay = dateDue.split(" ")[1];
