@@ -10,19 +10,39 @@ import "../MainContent.scss";
 import "./Project.scss";
 
 class Project extends Component {
-    state = {
-      modal: false,
+  state = {
+    modal: false,
+    edit: false,
+    editTask: false,
+    task: false,
+    name: "",
+    members: [],
+    id: "",
+    owner: {},
+    tasks: [],
+    date: "",
+    taskName: "",
+    assignee: "",
+    taskId: "",
+    dateDue: ""
+  };
+
+    toggleModal = e => {
+    this.setState({
+      modal: !this.state.modal,
       edit: false,
-      editTask: false,
       task: false,
-      name: "",
-      members: [],
-      id: "",
-      owner: {},
-      tasks: [],
-      date: "",
-      taskName: "",
-      assignee: "",
-      taskId: "",
-      dateDue: ""
-    };
+      editTask: false
+    });
+  };
+
+    toggleEditModal = (name, members, id, owner, e) => {
+    this.setState({
+      modal: !this.state.modal,
+      edit: !this.state.edit,
+      name: name,
+      members: members,
+      id: id,
+      owner: owner
+    });
+  };
