@@ -98,3 +98,26 @@
 .month-due {
   margin-right: 1rem;
 }
+
+.members {
+  margin-top: 1rem;
+  height: 170px;
+  overflow: scroll;
+  border-bottom: 1px solid $gray;
+}
+
+.members-edit {
+  margin-top: 1rem;
+  overflow: scroll;
+  border-bottom: 1px solid $gray;
+  height: 130px;
+}
+
+.add-members {
+  background-color: $white;
+  color: $primaryBlue;
+
+  &:hover {
+    color: $white;
+  }
+}
