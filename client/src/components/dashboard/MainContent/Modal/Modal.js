@@ -376,3 +376,44 @@ class Modal extends Component {
         }
         return null;
       });
+
+      // Due date dropdown in the Modal
+            const MONTHS = new Array(12).fill(1);
+      const DAYS = new Array(31).fill(1);
+
+      let monthsOptions = MONTHS.map((month, i) => {
+        return (
+          <option key={i} value={i + 1}>
+            {i < 9 && "0"}
+            {i + 1}
+          </option>
+        );
+      });
+
+      let daysOptions = DAYS.map((day, i) => (
+        <option key={i} value={i + 1}>
+          {i < 9 && "0"}
+          {i + 1}
+        </option>
+      ));
+
+            return (
+        <form className="modal">
+          <span className="close-modal" onClick={this.onClose}>
+            &times;
+          </span>
+          <h1 className="header">Edit task</h1>
+          <div className="form-group">
+            <label>
+              <div className="form-label">Task Name (required)</div>
+              <input
+                required
+                onChange={this.onChange}
+                value={this.state.taskName}
+                id="taskName"
+                type="text"
+                placeholder={"What is the task?"}
+                className="form-input"
+              />
+            </label>
+          </div>
