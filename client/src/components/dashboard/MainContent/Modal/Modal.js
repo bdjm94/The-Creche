@@ -417,3 +417,26 @@ class Modal extends Component {
               />
             </label>
           </div>
+                    <div className="form-group">
+            <div className="split">
+              <label>
+                <div className="form-label">Assignee</div>
+                <select
+                  onChange={this.onSelectChange}
+                  value={this.state.assignee}
+                  id="assignee"
+                  type="text"
+                  className="form-input task-input-split"
+                >
+                  {!assignee && (
+                    <option disabled value="">
+                      Assign to
+                    </option>
+                  )}
+                  {assignee && <option value={assignee}>{assigneeName}</option>}
+                  {assigneeName !== name + " (You)" && (
+                    <option value={email}>{name + " (You)"}</option>
+                  )}
+                  {membersOptions}
+                </select>
+              </label>
