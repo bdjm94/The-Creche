@@ -304,3 +304,19 @@ class Modal extends Component {
                   {membersOptions}
                 </select>
               </label>
+                            <label>
+                <div className="form-label">Due Date</div>
+                <div className="split">
+                  <select
+                    required={this.state.dayDue ? true : false}
+                    onChange={this.onSelectChange}
+                    value={this.state.monthDue}
+                    id="monthDue"
+                    type="text"
+                    className="form-input task-input-split month-due"
+                  >
+                    <option disabled value="">
+                      Month
+                    </option>
+                    {monthsOptions}
+                  </select>
