@@ -222,3 +222,14 @@ class Modal extends Component {
 
     this.onClose();
   };
+
+    render() {
+    if (!this.props.modal) {
+      return null;
+    }
+
+    document.onkeyup = e => {
+      if (e.keyCode === 27 && this.props.modal) {
+        this.onClose();
+      }
+    };
