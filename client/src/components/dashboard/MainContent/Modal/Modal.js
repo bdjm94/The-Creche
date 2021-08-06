@@ -364,3 +364,15 @@ class Modal extends Component {
           assigneeName = name + " (You)";
         }
       });
+
+      // Assignee dropdown in the Modal
+      let membersOptions = teamMembers.map((member, index) => {
+        if (member.name !== assigneeName) {
+          return (
+            <option key={member._id} value={member.email}>
+              {member.name}
+            </option>
+          );
+        }
+        return null;
+      });
