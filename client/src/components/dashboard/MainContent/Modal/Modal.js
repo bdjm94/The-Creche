@@ -654,3 +654,14 @@ class Modal extends Component {
             })}
           </div>
           <div>
+                          <button
+              className="main-btn create-project"
+              onClick={this.createProject}
+            >
+              Create Project
+            </button>
+          </div>
+        </div>
+      );
+  }
+}
