@@ -77,3 +77,16 @@
     transition: all 0.25s ease 0s;
   }
 }
+
+.split {
+  display: flex;
+  justify-content: space-between;
+}
+
+.split-input {
+  width: 47.5%;
+}
+
+.split-email {
+  padding-right: 0rem;
+}
