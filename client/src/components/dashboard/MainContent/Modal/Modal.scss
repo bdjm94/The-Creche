@@ -35,3 +35,16 @@
     cursor: pointer;
   }
 }
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  width: 100%;
+  padding-right: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 14px;
+  color: $darkGray;
+  font-family: $code;
+}
