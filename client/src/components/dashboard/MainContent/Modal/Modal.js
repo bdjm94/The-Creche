@@ -240,3 +240,10 @@ class Modal extends Component {
     if (this.props.task) {
       const { teamMembers } = this.props.projects.project;
       const { name, email } = this.props.auth.user;
+
+            // Assign team member in dropdown in Modal
+      let membersOptions = teamMembers.map((member, index) => (
+        <option key={index} value={member.email}>
+          {member.name}
+        </option>
+      ));
