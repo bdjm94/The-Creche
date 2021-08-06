@@ -665,3 +665,21 @@ class Modal extends Component {
       );
   }
 }
+
+const mapStateToProps = state => ({
+  auth: state.auth,
+  projects: state.projects,
+  tasks: state.tasks
+});
+
+export default connect(
+  mapStateToProps,
+  {
+    createProject,
+    updateProject,
+    deleteProject,
+    createTask,
+    deleteTask,
+    updateTask
+  }
+)(withRouter(Modal));
