@@ -210,3 +210,15 @@ class Modal extends Component {
 
       finalDate = momentDate[1] + " " + momentDate[2];
     }
+
+        let task = {
+      id: id,
+      taskName: this.state.taskName,
+      dateDue: finalDate,
+      assignee: this.state.assignee || this.props.assignee
+    };
+
+    this.props.updateTask(task);
+
+    this.onClose();
+  };
