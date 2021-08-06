@@ -25,3 +25,13 @@
     transform: translateY(0px);
   }
 }
+
+.close-modal {
+  color: $black;
+  font-size: 18px;
+  display: inline-block;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
