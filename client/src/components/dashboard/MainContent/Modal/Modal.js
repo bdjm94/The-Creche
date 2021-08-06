@@ -558,3 +558,32 @@ class Modal extends Component {
                       onChange={this.onChange}
                     />
                   </label>
+                                    <span
+                    className="delete"
+                    onClick={this.deleteMember.bind(this, id)}
+                  >
+                    REMOVE
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+          <div>
+            <button
+              className="main-btn update-project"
+              onClick={this.updateProject.bind(this, this.props.id)}
+            >
+              Update Project
+            </button>
+            {this.props.owner.id === this.props.auth.user.id ? (
+              <button
+                className="main-btn delete-project"
+                onClick={this.deleteProject.bind(this, this.props.id)}
+              >
+                Delete Project
+              </button>
+            ) : null}
+          </div>
+        </div>
+      );
+    }
