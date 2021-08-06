@@ -587,3 +587,25 @@ class Modal extends Component {
         </div>
       );
     }
+
+        // Create project modal
+    else
+      return (
+        <div className="modal">
+          <span className="close-modal" onClick={this.onClose}>
+            &times;
+          </span>
+          <h1 className="header">Create a project</h1>
+          <div className="form-group">
+            <label>
+              <div className="form-label">Project Name (required)</div>
+              <input
+                onChange={this.onChange}
+                value={this.state.projectName}
+                id="projectName"
+                type="text"
+                placeholder="My Awesome Project"
+                className="form-input"
+              />
+            </label>
+          </div>
