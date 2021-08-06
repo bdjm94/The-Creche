@@ -499,3 +499,28 @@ class Modal extends Component {
         </form>
       );
     }
+
+        // Edit project modal
+    else if (this.props.edit) {
+      return (
+        <div className="modal">
+          <span className="close-modal" onClick={this.onClose}>
+            &times;
+          </span>
+          <h1 className="header">Edit Project Info</h1>
+          <p className="created-by">
+            Created by {this.props.owner.name} ({this.props.owner.email})
+          </p>
+          <div className="form-group">
+            <label>
+              <div className="form-label">Project Name (required)</div>
+              <input
+                onChange={this.onChange}
+                value={this.state.projectName}
+                id="projectName"
+                type="text"
+                placeholder={"My Awesome Project"}
+                className="form-input"
+              />
+            </label>
+          </div>
