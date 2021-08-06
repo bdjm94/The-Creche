@@ -140,3 +140,17 @@
     opacity: 0.9;
   }
 }
+
+.delete {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  color: $black;
+  font-size: 0.5rem;
+  margin-top: 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+    color: $red;
+  }
+}
