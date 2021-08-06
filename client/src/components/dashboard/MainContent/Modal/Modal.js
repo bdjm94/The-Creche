@@ -265,3 +265,24 @@ class Modal extends Component {
           {i + 1}
         </option>
       ));
+
+            return (
+        <form onSubmit={this.createTask} className="modal">
+          <span className="close-modal" onClick={this.onClose}>
+            &times;
+          </span>
+          <h1 className="header">Create task</h1>
+          <div className="form-group">
+            <label>
+              <div className="form-label">Task Name (required)</div>
+              <input
+                required
+                onChange={this.onChange}
+                value={this.state.taskName}
+                id="taskName"
+                type="text"
+                placeholder={"What is the task?"}
+                className="form-input"
+              />
+            </label>
+          </div>
