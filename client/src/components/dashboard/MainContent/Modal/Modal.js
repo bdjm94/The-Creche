@@ -337,3 +337,11 @@ class Modal extends Component {
               </label>
             </div>
           </div>
+                    <div>
+            <button className="main-btn update-project" type="submit">
+              Create Task
+            </button>
+          </div>
+        </form>
+      );
+    }
