@@ -139,3 +139,21 @@ class Modal extends Component {
 
     this.onClose();
   };
+
+    updateTask = id => {
+    let finalDate;
+
+    let dates = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ];
