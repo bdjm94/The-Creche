@@ -46,3 +46,21 @@ class Project extends Component {
       owner: owner
     });
   };
+
+    toggleTaskModal = e => {
+    this.setState({
+      modal: !this.state.modal,
+      task: !this.state.task
+    });
+  };
+
+    toggleEditTaskModal = (taskName, assignee, dateDue, id, e) => {
+    this.setState({
+      modal: !this.state.modal,
+      editTask: !this.state.editTask,
+      taskName: taskName,
+      assignee: assignee,
+      taskId: id,
+      dateDue: dateDue
+    });
+  };
