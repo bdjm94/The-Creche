@@ -643,3 +643,14 @@ class Modal extends Component {
                       onChange={this.onChange}
                     />
                   </label>
+                                    <span
+                    className="delete"
+                    onClick={this.deleteMember.bind(this, id)}
+                  >
+                    REMOVE
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+          <div>
