@@ -535,7 +535,7 @@ class Modal extends Component {
               return (
                 <div className="split" key={id}>
                   <label className="form-label" htmlFor={memberId}>
-                    Name (required for teams)
+                    Name (required)
                     <input
                       type="text"
                       name="name"
@@ -547,7 +547,7 @@ class Modal extends Component {
                     />
                   </label>
                                     <label className="form-label split-email" htmlFor={emailId}>
-                    Email (required for teams)
+                    Email (required)
                     <input
                       type="text"
                       name="email"
@@ -620,13 +620,25 @@ class Modal extends Component {
               return (
                 <div className="split" key={id}>
                   <label className="form-label" htmlFor={memberId}>
-                    Name (required for teams)
+                    Name (required)
                     <input
                       type="text"
                       name="name"
                       data-id={id}
                       id={memberId}
                       value={members[id].name}
+                      className="form-input"
+                      onChange={this.onChange}
+                    />
+                  </label>
+                                    <label className="form-label split-email" htmlFor={emailId}>
+                    Email (required)
+                    <input
+                      type="text"
+                      name="email"
+                      data-id={id}
+                      id={emailId}
+                      value={members[id].email}
                       className="form-input"
                       onChange={this.onChange}
                     />
