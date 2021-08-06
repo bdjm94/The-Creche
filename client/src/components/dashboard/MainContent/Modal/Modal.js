@@ -233,3 +233,10 @@ class Modal extends Component {
         this.onClose();
       }
     };
+
+        let { members } = this.state;
+
+    // Create task modal
+    if (this.props.task) {
+      const { teamMembers } = this.props.projects.project;
+      const { name, email } = this.props.auth.user;
