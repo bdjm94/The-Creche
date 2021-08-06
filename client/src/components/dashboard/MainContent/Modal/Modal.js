@@ -481,3 +481,21 @@ class Modal extends Component {
               </label>
             </div>
           </div>
+                    <div>
+            <button
+              className="main-btn update-project"
+              type="button"
+              onClick={this.updateTask.bind(this, taskId)}
+            >
+              Update Task
+            </button>
+            <button
+              className="main-btn delete-project"
+              onClick={this.deleteTask.bind(this, taskId)}
+            >
+              Delete Task
+            </button>
+          </div>
+        </form>
+      );
+    }
