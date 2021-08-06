@@ -64,3 +64,15 @@ class Project extends Component {
       dateDue: dateDue
     });
   };
+
+    componentDidMount() {
+    this.props.getProject(this.props.match.params.project);
+    this.props.getTasks(this.props.match.params.project);
+  }
+
+    componentDidUpdate(prevProps) {
+    if (this.props.match.params.project !== prevProps.match.params.project) {
+      this.props.getProject(this.props.match.params.project);
+      this.props.getTasks(this.props.match.params.project);
+    }
+  }
