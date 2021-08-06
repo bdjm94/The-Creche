@@ -247,3 +247,21 @@ class Modal extends Component {
           {member.name}
         </option>
       ));
+
+            // Due date dropdown in Modal
+      const MONTHS = new Array(12).fill(1);
+      const DAYS = new Array(31).fill(1);
+
+      let monthsOptions = MONTHS.map((month, i) => (
+        <option key={i} value={i + 1}>
+          {i < 9 && "0"}
+          {i + 1}
+        </option>
+      ));
+
+      let daysOptions = DAYS.map((day, i) => (
+        <option key={i} value={i + 1}>
+          {i < 9 && "0"}
+          {i + 1}
+        </option>
+      ));
