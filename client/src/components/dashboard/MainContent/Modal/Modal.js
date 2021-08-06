@@ -355,3 +355,12 @@ class Modal extends Component {
 
       let assignedMonth = moment(dateDue).month() + 1;
       let assignedDay = dateDue.split(" ")[1];
+
+            // Finding name from email
+            teamMembers.forEach(member => {
+        if (member.email === assignee) {
+          assigneeName = member.name;
+        } else if (assignee) {
+          assigneeName = name + " (You)";
+        }
+      });
