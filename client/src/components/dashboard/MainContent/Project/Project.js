@@ -90,3 +90,29 @@ class Project extends Component {
   deleteTask = id => {
     this.props.deleteTask(id);
   };
+
+    render() {
+    const { tasks } = this.props.tasks;
+
+    let tasksList = tasks.map((task, index) => (
+      <div className="task-input" key={task._id}>
+        <i
+          className="material-icons check-task"
+          onClick={this.deleteTask.bind(this, task._id)}
+        >
+          check_circle
+        </i>
+        <span
+          onClick={this.toggleEditTaskModal.bind(
+            this,
+            task.taskName,
+            task.assignee,
+            task.dateDue,
+            task._id
+          )}
+          id={index}
+          name="task"
+          className="project-task"
+        >
+          {task.taskName}
+        </span>
