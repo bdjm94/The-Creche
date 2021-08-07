@@ -10,7 +10,7 @@ import {
   withRouter
 } from "react-router-dom";
 
-import Spinner from "../common/Spinner";
+import Loading from "../common/LoadingIcon";
 import SideNav from "./SideNav/SideNav";
 import TopNav from "./TopNav/TopNav";
 import Dashboard from "./MainContent/Dashboard";
@@ -19,3 +19,29 @@ import Project from "./MainContent/Project/Project";
 import NotFound from "../404/404";
 
 import "./Layout.scss";
+
+class Layout extends Component {
+  componentDidMount() {
+    this.props.getProjects();
+  }
+
+  render() {
+    const { projects, projectsLoading } = this.props.projects;
+
+    let dashboardContent;
+
+    if (projects === null || projectsLoading) {
+      dashboardContent = <Loading />;
+    } else if (projects.length > 0) {
+      dashboardContent = (
+        <>
+          <SideNav projects={projects} />
+          <div className="right">
+            <TopNav />
+            <Switch>
+              <Route
+                exact
+                path="/dashboard"
+                projects={projects}
+                component={Dashboard}
+              />
