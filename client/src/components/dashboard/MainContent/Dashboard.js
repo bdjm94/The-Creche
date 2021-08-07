@@ -57,3 +57,6 @@ class Dashboard extends Component {
         >
           Edit project
         </div>
+        <div className="project-info-button">Go to project</div>
+      </div>
+    ));
