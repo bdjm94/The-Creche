@@ -51,3 +51,9 @@ class Layout extends Component {
                 projects={projects}
                 component={Tasks}
               />
+                <Route exact path="/projects/:project" component={Project} />
+              <Route component={NotFound} />
+            </Switch>
+          </div>
+        </>
+      );
