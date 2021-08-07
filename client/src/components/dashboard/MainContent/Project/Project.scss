@@ -50,3 +50,24 @@
     transition: all 0.25s ease 0s;
   }
 }
+
+.project-tasks {
+  display: flex;
+  flex-direction: column;
+
+  .project-task {
+    width: 92.5%;
+    outline: none;
+    border: none;
+    height: 36px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    margin-left: 1rem;
+
+    &:hover {
+      background-color: $lighterGray;
+      cursor: pointer;
+    }
+  }
