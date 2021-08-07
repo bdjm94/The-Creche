@@ -36,3 +36,23 @@
       transition: all 0.25s ease 0s;
       box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
     }
+
+        @keyframes float {
+      0% {
+        transform: translatey(0px);
+      }
+      50% {
+        transform: translatey(-10px);
+      }
+      100% {
+        transform: translatey(0px);
+      }
+    }
+  }
+
+  p {
+    &:nth-of-type(2) {
+      font-size: 12px;
+    }
+  }
+}
