@@ -15,3 +15,20 @@ class Dashboard extends Component {
     id: "",
     owner: {}
   };
+
+  toggleModal = e => {
+    this.setState({ modal: !this.state.modal, edit: false });
+  };
+
+  toggleEditModal = (name, members, id, owner, e) => {
+    e.stopPropagation();
+
+    this.setState({
+      modal: !this.state.modal,
+      edit: !this.state.edit,
+      name: name,
+      members: members,
+      id: id,
+      owner: owner
+    });
+  };
