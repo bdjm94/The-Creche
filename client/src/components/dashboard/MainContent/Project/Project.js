@@ -188,3 +188,21 @@ class Project extends Component {
               taskId={this.state.taskId}
             />
           </div>
+                    <div className="tasks-container">
+            <div className="projects-first-row">
+              <button
+                className="main-btn add-btn"
+                onClick={this.toggleTaskModal}
+              >
+                Add task
+              </button>
+              <div className="projects-column-headers">
+                <p>Assignee</p>
+                <p>Due</p>
+              </div>
+            </div>
+            <div className="project-tasks">{tasksList}</div>
+          </div>
+        </div>
+      );
+    }
