@@ -7,7 +7,7 @@ const NotFound = props => {
   return (
     <div className="not-found">
       <Link to="/dashboard">
-        <b>404</b>
+        <b>404 Error</b>
       </Link>
       <br />
       <p>The requested page was not found on our server.</p>
