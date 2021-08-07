@@ -103,3 +103,26 @@
     background-color: $primaryBlue;
   }
 }
+
+.project-listing {
+  font-size: 14px;
+  padding-right: 1rem;
+  margin-top: 1.25rem;
+  transition: all 0.25s ease 0s;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 150px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  a {
+    color: $white;
+  }
+
+  a:visited {
+    color: $white;
+  }
+}
