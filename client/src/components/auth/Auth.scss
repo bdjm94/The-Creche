@@ -82,3 +82,10 @@
     transition: all 0.25s ease 0s;
   }
 }
+
+.auth-error {
+  margin-top: 0.5rem;
+  color: $red;
+  font-family: $code;
+  font-size: 14px;
+}
