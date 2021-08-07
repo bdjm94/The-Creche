@@ -12,3 +12,35 @@
   min-width: 1100px;
   z-index: 1000;
 }
+
+/* Left side of the navigation bar */
+.left-top {
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+
+  .hamburger-top-menu {
+    font-size: 20px;
+    transition: all 0.25s ease 0s;
+    display: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .brand-header {
+    margin-left: 2rem;
+    font-weight: 500;
+    font-family: $code;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    user-select: none;
+    color: $black;
+  }
+
+  .brand-header-sub {
+    font-size: 0.5rem;
+  }
+}
