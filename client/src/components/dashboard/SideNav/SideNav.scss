@@ -1,1 +1,12 @@
 @import "../../../styles/base.scss";
+
+.side {
+  min-width: 225px;
+  max-width: 225px;
+  height: 100vh;
+  border-right: 2px solid $lighterGray;
+  background-color: $mainDark;
+  position: fixed;
+  z-index: 1;
+  margin-left: 0px;
+  transition: margin-left 0.25s ease 0s;
