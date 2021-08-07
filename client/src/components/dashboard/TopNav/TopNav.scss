@@ -112,3 +112,21 @@
     padding-right: 1rem;
     font-size: 12px;
   }
+
+  li {
+    width: 140px;
+    padding: 1rem;
+    color: $black;
+    background-color: $white;
+    transition: all 0.25s ease 0s;
+    font-size: 14px;
+
+    &:hover {
+      cursor: pointer;
+      color: $primaryBlue;
+      background-color: $lighterGray;
+      transition: all 0.25s ease 0s;
+    }
+  }
+}
+}
