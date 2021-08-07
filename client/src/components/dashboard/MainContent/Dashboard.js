@@ -60,3 +60,24 @@ class Dashboard extends Component {
         <div className="project-info-button">Go to project</div>
       </div>
     ));
+
+        if (projects.length > 0) {
+      content = (
+        <>
+          <button className="main-btn" onClick={this.toggleModal}>
+            Create another project
+          </button>
+          <div className="modal-wrapper">
+            <Modal
+              onClose={this.toggleModal}
+              modal={this.state.modal}
+              edit={this.state.edit}
+              name={this.state.name}
+              members={this.state.members}
+              id={this.state.id}
+              owner={this.state.owner}
+            />
+          </div>
+          <div className="projects-wrapper">{projectData}</div>
+        </>
+      );
