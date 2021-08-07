@@ -116,3 +116,17 @@ class Project extends Component {
         >
           {task.taskName}
         </span>
+                <span
+          onClick={this.toggleEditTaskModal.bind(
+            this,
+            task.taskName,
+            task.assignee,
+            task.dateDue,
+            task._id
+          )}
+          className={!task.assignee ? "task-info muted" : "task-info"}
+        >
+          {task.assignee === this.props.auth.user.email
+            ? "You"
+            : task.assignee || "Unassigned"}
+        </span>
