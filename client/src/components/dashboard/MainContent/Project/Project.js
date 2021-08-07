@@ -170,3 +170,21 @@ class Project extends Component {
           >
             Edit Project Info
           </button>
+
+                    <div className="modal-wrapper">
+            <Modal
+              onClose={this.toggleModal}
+              modal={this.state.modal}
+              edit={this.state.edit}
+              task={this.state.task}
+              editTask={this.state.editTask}
+              name={this.state.name}
+              members={this.state.members}
+              id={this.state.id}
+              owner={this.state.owner}
+              taskName={this.state.taskName}
+              assignee={this.state.assignee}
+              dateDue={this.state.dateDue}
+              taskId={this.state.taskId}
+            />
+          </div>
