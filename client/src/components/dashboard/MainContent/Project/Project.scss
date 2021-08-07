@@ -41,3 +41,12 @@
     color: $white;
   }
 }
+
+.check-task {
+  transition: all 0.25s ease 0s;
+
+  &:hover {
+    color: $hoverBlue;
+    transition: all 0.25s ease 0s;
+  }
+}
