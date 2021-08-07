@@ -99,3 +99,35 @@ class Register extends Component {
               <div className="auth-error">{errors.password}</div>
             </label>
           </div>
+
+          <div>
+            <button type="submit" className="auth-button">
+              Sign up
+            </button>
+          </div>
+          <div className="bottom-group">
+            <Link to="/" className="link">
+              Sign in
+            </Link>
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
+
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+
+export default connect(
+  mapStateToProps,
+  { registerUser }
+)(withRouter(Register));
