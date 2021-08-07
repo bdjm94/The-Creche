@@ -76,3 +76,22 @@
     cursor: pointer;
   }
 }
+
+.profile {
+    height: 15px;
+    width: 15px;
+    padding: 1.25rem;
+    font-size: 12px;
+    background-color: $red;
+    color: $white;
+    margin-right: 2rem;
+    display: inline-block;
+    user-select: none;
+    transition: all 0.25s ease 0s;
+
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    transition: all 0.25s ease 0s;
+  }
+}
