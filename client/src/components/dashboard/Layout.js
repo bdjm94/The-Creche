@@ -85,3 +85,19 @@ class Layout extends Component {
       );
     }
   }
+
+Layout.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth,
+  projects: state.projects
+});
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    { getProjects }
+  )(Layout)
+);
