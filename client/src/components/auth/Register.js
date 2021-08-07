@@ -72,7 +72,7 @@ class Register extends Component {
 
           <div className="auth-group">
             <label>
-              <div className="auth-label">Email address</div>
+              <div className="auth-label">Email Address</div>
               <input
                 onChange={this.onChange}
                 value={this.state.email}
@@ -82,5 +82,20 @@ class Register extends Component {
                 className="auth-input"
               />
               <div className="auth-error">{errors.email}</div>
+            </label>
+          </div>
+
+          <div className="auth-group">
+            <label>
+              <div className="auth-label">Password</div>
+              <input
+                onChange={this.onChange}
+                value={this.state.password}
+                error={errors.password}
+                id="password"
+                type="password"
+                className="auth-input"
+              />
+              <div className="auth-error">{errors.password}</div>
             </label>
           </div>
