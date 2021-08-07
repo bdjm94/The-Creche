@@ -62,3 +62,15 @@ class TopNav extends Component {
           >
             menu
           </i>
+          <Link to="/dashboard">
+            <h1 className="brand-header">
+              The <span className="brand-header-sub">Creche</span>
+            </h1>
+          </Link>
+        </div>
+        <ul className="right-top">
+          <li>
+            <div className="email">
+              <p>Signed in as {email}</p>
+            </div>
+          </li>
