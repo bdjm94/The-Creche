@@ -110,3 +110,24 @@
     transition: all 0.25s ease 0s;
   }
 }
+
+.bottom-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.link {
+  background-color: $lighterGray;
+  color: $darkGray;
+  text-decoration: none;
+  font-family: $code;
+  transition: all 0.25s ease 0s;
+  padding: 0.25rem;
+
+  &:hover {
+    color: $primaryBlue;
+    transform: translateY(-2.5px);
+    transition: all 0.25s ease 0s;
+  }
+}
