@@ -74,3 +74,31 @@ class TopNav extends Component {
               <p>Signed in as {email}</p>
             </div>
           </li>
+          <li>
+            <div className="profile" onClick={this.handleProfileClick}>
+              <span>{name !== undefined && name.split("")[0]}</span>
+            </div>
+            {this.state.dropdown ? (
+              <ul className="dropdown">
+                <p>Hello, {name !== undefined && name.split(" ")[0]}</p>
+                <Link to="/dashboard">
+                  <li>Home</li>
+                </Link>
+                <li onClick={this.onLogoutClick}>Sign Out</li>
+              </ul>
+            ) : null}
+          </li>
+        </ul>
+      </nav>
+    );
+  }
+}
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(withRouter(TopNav));
