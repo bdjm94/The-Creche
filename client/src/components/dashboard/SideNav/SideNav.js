@@ -67,3 +67,14 @@ class SideNav extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  projects: state.projects
+});
+
+export default withRouter(
+  connect(
+    mapStateToProps,
+    { logoutUser }
+  )(withRouter(SideNav))
+);
