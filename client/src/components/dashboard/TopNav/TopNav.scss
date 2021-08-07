@@ -44,3 +44,35 @@
     font-size: 0.5rem;
   }
 }
+
+/* Right side of the navigation bar */
+.right-top {
+  display: flex;
+  align-items: center;
+  margin-right: 225px;
+  transition: all 0.25s ease 0s;
+
+.email {
+  font-size: 10px;
+  margin-right: 1rem;
+  color: $darkGray;
+  text-align: right;
+  line-height: 0.5rem;
+  }
+
+.sign-out {
+  background-color: $lighterGray;
+  color: $darkGray;
+  text-decoration: none;
+  font-family: $code;
+  transition: all 0.25s ease 0s;
+  padding: 0.25rem;
+  display: inline-block;
+
+  &:hover {
+    color: $primaryBlue;
+    transform: translateY(-2.5px);
+    transition: all 0.25s ease 0s;
+    cursor: pointer;
+  }
+}
