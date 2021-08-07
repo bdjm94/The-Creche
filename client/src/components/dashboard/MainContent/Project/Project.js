@@ -146,3 +146,27 @@ class Project extends Component {
         </span>
       </div>
     ));
+
+        if (
+      this.props.project &&
+      this.props.project.teamMembers &&
+      !this.props.projects.projectLoading &&
+      !this.props.tasks.tasksLoading
+    ) {
+      const { project } = this.props;
+
+      return (
+        <div className="main-content">
+          <h1 className="project-header">{project.name}</h1>
+          <button
+            onClick={this.toggleEditModal.bind(
+              this,
+              project.name,
+              project.teamMembers,
+              project._id,
+              project.owner
+            )}
+            className="main-btn center-btn"
+          >
+            Edit Project Info
+          </button>
