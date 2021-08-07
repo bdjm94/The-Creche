@@ -91,3 +91,28 @@ i {
     cursor: pointer;
   }
 }
+
+.task-info {
+  font-size: 12px;
+  text-align: center;
+  padding: 0.2rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  &:nth-of-type(1) {
+    margin-right: 2rem;
+    width: 100px;
+  }
+
+  &:nth-of-type(2),
+  &:nth-of-type(3) {
+    width: 100px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $lighterGray;
+    }
+  }
+}
