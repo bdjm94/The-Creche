@@ -206,3 +206,11 @@ class Project extends Component {
         </div>
       );
     }
+
+    return (
+        <div className="project-loading">
+          <Loading />
+        </div>
+      );
+    }
+  }
