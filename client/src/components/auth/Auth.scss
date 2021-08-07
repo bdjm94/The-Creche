@@ -39,3 +39,23 @@
     color: $primaryBlue;
   }
 }
+
+.auth-form {
+  width: 480px;
+  background-color: $white;
+  border: 1px solid $gray;
+  padding: 2rem;
+}
+
+.auth-group {
+  margin-bottom: 1rem;
+}
+
+.auth-label {
+  width: 100%;
+  padding-right: 2rem;
+  margin-bottom: 0.75rem;
+  font-size: 14px;
+  color: $darkGray;
+  font-family: $code;
+}
