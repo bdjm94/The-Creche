@@ -10,3 +10,13 @@
   z-index: 1;
   margin-left: 0px;
   transition: margin-left 0.25s ease 0s;
+
+.top {
+  margin-top: 1.55rem;
+  padding-left: 0px;
+
+  li {
+    &:hover {
+      cursor: pointer;
+    }
+  }
