@@ -69,3 +69,18 @@ class Register extends Component {
               <div className="auth-error">{errors.name}</div>
             </label>
           </div>
+
+          <div className="auth-group">
+            <label>
+              <div className="auth-label">Email address</div>
+              <input
+                onChange={this.onChange}
+                value={this.state.email}
+                error={errors.email}
+                id="email"
+                type="email"
+                className="auth-input"
+              />
+              <div className="auth-error">{errors.email}</div>
+            </label>
+          </div>
