@@ -27,3 +27,29 @@
   justify-content: center;
   align-items: center;
 }
+
+.main-btn {
+  height: 40px;
+  color: #ffffff;
+  margin-top: 0.5rem;
+  background-color: $primaryBlue;
+  border-color: $primaryBlue;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: $code;
+  transition: all 0.25s ease 0s;
+  padding: 0rem 1rem;
+  min-width: 200px;
+
+  &:hover {
+    background-color: $hoverBlue;
+    border-color: $hoverBlue;
+    transform: translateY(-2.5px);
+    cursor: pointer;
+    transition: all 0.25s ease 0s;
+  }
+}
+
+.split {
+  display: flex;
+}
