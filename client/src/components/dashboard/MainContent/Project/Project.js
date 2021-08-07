@@ -214,3 +214,15 @@ class Project extends Component {
       );
     }
   }
+
+  const mapStateToProps = state => ({
+  auth: state.auth,
+  project: state.projects.project,
+  projects: state.projects,
+  tasks: state.tasks
+});
+
+export default connect(
+  mapStateToProps,
+  { getProject, getTasks, deleteTask }
+)(Project);
