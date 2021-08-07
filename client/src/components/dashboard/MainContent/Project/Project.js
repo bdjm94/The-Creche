@@ -76,3 +76,17 @@ class Project extends Component {
       this.props.getTasks(this.props.match.params.project);
     }
   }
+
+    onChange = async e => {
+    await this.setState({ tasks: this.props.tasks.tasks });
+
+    let tasks = await [...this.state.tasks];
+
+    tasks[e.target.id].taskName = await e.target.value;
+
+    await this.setState({ tasks });
+  };
+
+  deleteTask = id => {
+    this.props.deleteTask(id);
+  };
