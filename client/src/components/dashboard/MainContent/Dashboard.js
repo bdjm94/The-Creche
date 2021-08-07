@@ -108,3 +108,12 @@ class Dashboard extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  projects: state.projects
+});
+
+export default connect(
+  mapStateToProps,
+  {}
+)(Dashboard);
