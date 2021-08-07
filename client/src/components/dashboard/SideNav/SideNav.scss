@@ -20,3 +20,17 @@
       cursor: pointer;
     }
   }
+
+.hamburger-side-menu {
+  color: $white;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1rem;
+  transition: all 0.25s ease 0s;
+  font-size: 20px;
+  margin-bottom: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
