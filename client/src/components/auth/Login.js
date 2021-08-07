@@ -75,3 +75,21 @@ class Login extends Component {
               </div>
             </label>
           </div>
+
+          <div className="auth-group">
+            <label>
+              <div className="auth-label">Password</div>
+              <input
+                onChange={this.onChange}
+                value={this.state.password}
+                error={errors.password}
+                id="password"
+                type="password"
+                className="auth-input"
+              />
+              <div className="auth-error">
+                {errors.password}
+                {errors.passwordincorrect}
+              </div>
+            </label>
+          </div>
