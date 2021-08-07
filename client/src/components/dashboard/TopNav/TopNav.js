@@ -17,3 +17,20 @@ class TopNav extends Component {
   componentWillUnmount() {
     document.removeEventListener("mousedown", this.handleClick, false);
   }
+
+    // Close the dropdown when clicking outside 
+  handleClick = e => {
+    if (this.state.dropdown && !this.node.contains(e.target)) {
+      this.setState({ dropdown: !this.state.dropdown });
+    }
+  };
+
+  onLogoutClick = e => {
+    e.preventDefault();
+    this.props.logoutUser(this.props.history);
+    window.location.href = "/";
+  };
+
+  handleProfileClick = e => {
+    this.setState({ dropdown: !this.state.dropdown });
+  };
