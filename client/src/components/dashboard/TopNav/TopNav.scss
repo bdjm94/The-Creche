@@ -104,3 +104,11 @@
   background-color: $white;
   padding: 1rem;
   transform: translate(-9rem, 1.5rem);
+
+  p {
+    width: 140px;
+    color: $darkGray;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 12px;
+  }
