@@ -81,3 +81,30 @@ class Dashboard extends Component {
           <div className="projects-wrapper">{projectData}</div>
         </>
       );
+    } else {
+      // If there are no projects
+      content = (
+        <>
+          <div className="projects">
+            <div className="no-projects">
+              <h1 className="header">You have no projects</h1>
+              <button className="main-btn" onClick={this.toggleModal}>
+                Create your first project
+              </button>
+              <div className="modal-wrapper">
+                <Modal onClose={this.toggleModal} modal={this.state.modal} />
+              </div>
+            </div>
+          </div>
+        </>
+      );
+    }
+
+    return (
+      <div className="main-content">
+        <h1 className="header">Your Projects</h1>
+        {content}
+      </div>
+    );
+  }
+}
