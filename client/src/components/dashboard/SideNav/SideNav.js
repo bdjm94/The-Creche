@@ -25,3 +25,29 @@ class SideNav extends Component {
     let rightSideRight = document.querySelector(".right-top");
     rightSideRight.classList.add("right-top-visibile");
   };
+
+    render() {
+    const { projects } = this.props.projects;
+
+    let projectData = projects.sort().map(project => (
+      <li className="project-listing" key={project._id}>
+        <Link to={`/projects/${project._id}`}>{project.name}</Link>
+      </li>
+    ));
+
+    return (
+      <nav className="side">
+        <ul className="top">
+          <li>
+            <i
+              onClick={this.toggleMenu}
+              className="material-icons hamburger-side-menu"
+            >
+              menu
+            </i>
+          </li>
+          <NavLink exact activeClassName="active-page" to="/dashboard">
+            <li>
+              <i className="material-icons icon">home</i>Home
+            </li>
+          </NavLink>
