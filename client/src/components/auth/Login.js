@@ -28,7 +28,14 @@ class Login extends Component {
         this.props.history.push("/dashboard");
       }
 
-        onChange = e => {
+      if (nextProps.errors) {
+        this.setState({
+          errors: nextProps.errors
+        });
+      }
+    }
+
+    onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
 
@@ -93,3 +100,35 @@ class Login extends Component {
               </div>
             </label>
           </div>
+
+          <div>
+            <button type="submit" className="auth-button">
+              Login
+            </button>
+          </div>
+          <div className="bottom-group">
+            <Link to="/register" className="link">
+              Sign up
+            </Link>
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
+
+Login.propTypes = {
+    loginUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired,
+    errors: PropTypes.object.isRequired
+  };
+  
+  const mapStateToProps = state => ({
+    auth: state.auth,
+    errors: state.errors
+  });
+  
+  export default connect(
+    mapStateToProps,
+    { loginUser }
+  )(Login);
