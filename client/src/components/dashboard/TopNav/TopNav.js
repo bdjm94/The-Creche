@@ -9,3 +9,11 @@ class TopNav extends Component {
   state = {
     dropdown: false
   };
+
+  componentDidMount() {
+    document.addEventListener("mousedown", this.handleClick, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleClick, false);
+  }
