@@ -22,3 +22,20 @@
   margin-bottom: 1rem;
   font-weight: $medium;
 }
+
+.demo {
+  font-size: 14px;
+  margin-top: -0.25rem;
+  text-align: center;
+  width: 300px;
+  line-height: 1.25rem;
+}
+
+.code-mail {
+  font-family: $code;
+
+  &:hover {
+    cursor: pointer;
+    color: $primaryBlue;
+  }
+}
