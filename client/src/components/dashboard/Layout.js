@@ -45,3 +45,9 @@ class Layout extends Component {
                 projects={projects}
                 component={Dashboard}
               />
+                <Route
+                exact
+                path="/tasks"
+                projects={projects}
+                component={Tasks}
+              />
