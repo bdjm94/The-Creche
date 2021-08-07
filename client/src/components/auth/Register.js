@@ -47,3 +47,25 @@ class Register extends Component {
 
     this.props.registerUser(newUser, this.props.history);
   };
+
+  render() {
+    const { errors } = this.state;
+
+    return (
+      <div className="base-wrapper">
+        <div className="auth-header">Register Below</div>
+        <form className="auth-form" noValidate onSubmit={this.onSubmit}>
+          <div className="auth-group">
+            <label>
+              <div className="auth-label">Name</div>
+              <input
+                onChange={this.onChange}
+                value={this.state.name}
+                error={errors.name}
+                id="name"
+                type="text"
+                className="auth-input"
+              />
+              <div className="auth-error">{errors.name}</div>
+            </label>
+          </div>
