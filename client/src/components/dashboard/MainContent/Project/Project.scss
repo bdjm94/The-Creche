@@ -1,1 +1,16 @@
 @import "../../../../styles/base.scss";
+
+.project-header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: $medium;
+  color: $black;
+}
+
+.project-subheader {
+  text-align: center;
+}
+
+.project-loading {
+  margin-bottom: 4rem;
+}
