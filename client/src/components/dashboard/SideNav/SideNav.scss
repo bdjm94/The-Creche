@@ -67,3 +67,20 @@
     }
   }
 }
+
+.invisibile {
+  margin-left: -225px;
+  transition: margin-left 0.25s ease 0s;
+}
+
+.active-page {
+  color: $white !important;
+  background-color: $lightDark;
+  transition: all 0.25s ease 0s;
+}
+
+.bottom {
+  margin-top: 4rem;
+  color: $white;
+  padding-left: 3.8rem;
+}
