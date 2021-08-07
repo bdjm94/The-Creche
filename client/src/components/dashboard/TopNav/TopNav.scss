@@ -95,3 +95,12 @@
     transition: all 0.25s ease 0s;
   }
 }
+
+.dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $gray;
+  background-color: $white;
+  padding: 1rem;
+  transform: translate(-9rem, 1.5rem);
