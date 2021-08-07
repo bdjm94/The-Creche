@@ -44,3 +44,29 @@
     transition: all 0.25s ease 0s;
   }
 }
+
+.project-name {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100px;
+}
+
+.project-info-button {
+  display: none;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  width: 125px;
+  border: 1px solid $primaryBlue;
+  color: $primaryBlue;
+  font-size: 10px;
+  transition: all 0.25s ease 0s;
+  padding: 0.5rem;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $hoverBlue;
+    color: $white;
+    transition: all 0.25s ease 0s;
+  }
+}
