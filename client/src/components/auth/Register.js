@@ -31,3 +31,19 @@ class Register extends Component {
       });
     }
   }
+
+  onChange = e => {
+    this.setState({ [e.target.id]: e.target.value });
+  };
+
+  onSubmit = e => {
+    e.preventDefault();
+
+    const newUser = {
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.password
+    };
+
+    this.props.registerUser(newUser, this.props.history);
+  };
