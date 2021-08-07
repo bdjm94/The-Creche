@@ -30,3 +30,14 @@
   background-color: $white;
   border: 1px solid $gray;
 }
+
+.add-btn {
+  margin-bottom: 0.7rem;
+  margin-left: 1rem;
+  background-color: $white;
+  color: $primaryBlue;
+
+  &:hover {
+    color: $white;
+  }
+}
