@@ -49,3 +49,16 @@ class TopNav extends Component {
     let rightSideRight = document.querySelector(".right-top");
     rightSideRight.classList.remove("right-top-visibile");
   };
+
+    render() {
+    const { name, email } = this.props.auth.user;
+
+    return (
+      <nav className="top-nav" ref={node => (this.node = node)}>
+        <div className="left-top">
+          <i
+            onClick={this.toggleMenu}
+            className="material-icons hamburger-top-menu"
+          >
+            menu
+          </i>
