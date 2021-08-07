@@ -131,3 +131,28 @@
     transition: all 0.25s ease 0s;
   }
 }
+
+@media (max-width: 800px) {
+  .bottom-group {
+    flex-direction: column;
+    padding-left: 0px;
+  }
+
+  .link {
+    margin: 0.25rem 0;
+  }
+
+  .auth-form {
+    width: 80%;
+  }
+
+  .bottom-group {
+    text-align: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .base-wrapper {
+    background-size: cover;
+  }
+}
