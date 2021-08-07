@@ -84,3 +84,22 @@
   color: $white;
   padding-left: 3.8rem;
 }
+
+.side-projects-header {
+  font-family: $code;
+}
+
+.project-listings {
+  height: 305px;
+  overflow: scroll;
+
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: $primaryBlue;
+  }
+}
