@@ -50,3 +50,28 @@ class Login extends Component {
   fillDemoPassword = () => {
     this.setState({ password: "test123" });
   };
+
+  render() {
+    const { errors } = this.state;
+
+    return (
+      <div className="base-wrapper">
+        <div className="auth-header">Sign In</div>
+        <form className="auth-form" noValidate onSubmit={this.onSubmit}>
+          <div className="auth-group">
+            <label>
+              <div className="auth-label">Email Address</div>
+              <input
+                onChange={this.onChange}
+                value={this.state.email}
+                error={errors.email}
+                id="email"
+                type="email"
+                className="auth-input"
+              />
+              <div className="auth-error">
+                {errors.email}
+                {errors.emailnotfound}
+              </div>
+            </label>
+          </div>
