@@ -130,3 +130,12 @@
   }
 }
 }
+
+.hamburger-visible {
+  display: block !important;
+}
+
+.right-top-visibile {
+  margin-right: 0px;
+  transition: all 0.25s ease 0s;
+}
