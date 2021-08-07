@@ -57,3 +57,31 @@ class Layout extends Component {
           </div>
         </>
       );
+    } else {
+        dashboardContent = (
+          <>
+            <SideNav />
+            <div className="right">
+              <TopNav />
+              <Switch>
+                <Route
+                  exact
+                  path="/dashboard"
+                  projects={[]}
+                  component={Dashboard}
+                />
+                <Route exact path="/tasks" component={Tasks} />
+                <Route component={NotFound} />
+              </Switch>
+            </div>
+          </>
+        );
+      }
+  
+      return (
+        <Router>
+          <div className="wrapper">{dashboardContent}</div>
+        </Router>
+      );
+    }
+  }
