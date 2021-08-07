@@ -34,3 +34,36 @@
     cursor: pointer;
   }
 }
+
+    div,
+    a {
+      color: $white;
+      width: 100%;
+      display: block;
+      transition: all 0.25s ease 0s;
+
+      &:hover {
+        cursor: pointer;
+        transition: all 0.25s ease 0s;
+      }
+
+      li {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+
+        &:hover {
+          background-color: $lightDark;
+        }
+
+        .icon {
+          display: inline-block;
+          font-size: 16px;
+          vertical-align: text-bottom;
+          padding-right: 1rem;
+          padding-left: 1rem;
+          padding-top: 0.25rem;
+        }
+      }
+    }
+  }
+}
