@@ -43,3 +43,25 @@ if (localStorage.jwtTokenCreche) {
     window.location.href = "./";
   }
 }
+
+class App extends Component {
+  render() {
+    return (
+      <Provider store={store}>
+        <Router>
+          <div className="App">
+            <Switch>
+              <Route exact path="/" component={Login} />
+              <Route exact path="/register" component={Register} />
+              <PrivateRoute exact path="/dashboard" component={Layout} />
+              <Route
+                component={localStorage.jwtTokenTeams ? Layout : NotFound}
+              />
+            </Switch>
+          </div>
+        </Router>
+      </Provider>
+    );
+  }
+}
+export default App;
