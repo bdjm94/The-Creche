@@ -23,6 +23,10 @@ useFindAndModify: false } )
 // Passport middleware
 app.use(passport.initialize());
 
+// Middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // Passport config
 require("./config/passport")(passport);
 
