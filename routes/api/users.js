@@ -74,7 +74,7 @@ bcrypt.compare(password, user.password).then(isMatch => {
         // Sign token
         jwt.sign(
             payload,
-            eys.secretOrKey,
+            keys.secretOrKey,
             {
             expiresIn: 31556926 // 1 year in seconds
             },
