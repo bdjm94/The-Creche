@@ -3,6 +3,7 @@ import { Link, withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
+import logo from "../../img/logo.png"
 
 import "./Auth.scss";
 
@@ -53,6 +54,7 @@ class Register extends Component {
 
     return (
       <div className="base-wrapper">
+        <img className="logo" src={logo} alt='Creche Logo' />
         <div className="auth-header">Register Below</div>
         <form className="auth-form" noValidate onSubmit={this.onSubmit}>
           <div className="auth-group">
