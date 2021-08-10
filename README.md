@@ -6,6 +6,7 @@
   - [Description](#description)
   - [Technologies](#technologies)
   - [Installation](#installation)
+  - [Future Implementations](#future-implementations)
   - [Usage Information](#usage-information)
   - [License](#license)
   - [Contribution Guidelines](#contribution-guidelines)
