@@ -50,6 +50,13 @@
   ```
   Server runs on http://localhost:5000 and client runs on http://localhost:3000
 
+  ## Future Implementations
+
+  - Multi-user login - allow each department have access to their own dashboard, specific to them
+  - Email notifications - get notified about the projects you are assigned to and about upcoming due dates for tasks
+  - Internal chat & video conferencing
+  - Link to the CRM that you use
+
   ## Usage Information
   Use this application to keep across projects and tasks
 
