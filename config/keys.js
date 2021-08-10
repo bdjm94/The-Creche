@@ -1,4 +1,6 @@
+require("dotenv").config();
+
 module.exports = {
-  mongoURI: "",
+  mongoURI: process.env.MONGODB_URI,
   secretOrKey: "secret"
 };

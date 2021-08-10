@@ -7,6 +7,8 @@ const users = require("./routes/api/users");
 const projects = require("./routes/api/projects");
 const tasks = require("./routes/api/tasks");
 
+require("dotenv").config();
+
 const app = express();
 
   // DB Config
