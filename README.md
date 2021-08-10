@@ -16,6 +16,8 @@
   ## Description
   The Creche is a MERN stack web based internal project management application. Designed to help teams keep across projects they are currently working on and assign employees to those projects. Also allows for manager to keep across who is working on what taks on the project and give due dates for those tasks.
 
+  Able to register and login securely to keep those sensitive projects safe!
+
   Visit [The Creche](https://the-creche.herokuapp.com/) here!
 
   ## Technologies
