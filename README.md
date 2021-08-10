@@ -20,6 +20,12 @@
 
   Visit [The Creche](https://the-creche.herokuapp.com/) here!
 
+  ```
+  Test Account
+  - Email: test@email.com
+  - Password: test123
+  ```
+
   ## Technologies
 
   <b><u>Front End</u></b>
