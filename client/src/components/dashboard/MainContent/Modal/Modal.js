@@ -604,7 +604,7 @@ class Modal extends Component {
                 value={this.state.projectName}
                 id="projectName"
                 type="text"
-                placeholder="My Awesome Project"
+                placeholder="Project of Champions"
                 className="form-input"
               />
             </label>
