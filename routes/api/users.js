@@ -86,7 +86,7 @@ bcrypt.compare(password, user.password).then(isMatch => {
                 }
             );
         } else {
-        return res.status(400).json({ passwordincorrect: "Password incorrect" });
+        return res.status(400).json({ passwordincorrect: "Email or Password is incorrect...Please try again" });
             }
         });
     });
